@@ -42,6 +42,7 @@ header nav[aria-expanded='true'] {
   header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
+    padding: 50px;
   }
 }
 
@@ -220,13 +221,17 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
     margin: 0;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
+    padding: 15px;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li:hover {
+    background-color: #ffea00;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
@@ -265,4 +270,9 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
 }
