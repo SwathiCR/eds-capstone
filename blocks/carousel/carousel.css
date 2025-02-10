@@ -69,7 +69,7 @@
 }
 
 .carousel .carousel-slide .carousel-slide-content a.button {
-    background-color: #ffea00;
+    background-color: var(--capstone-background-color);
     border-radius: 0%;
     color: black;
 }

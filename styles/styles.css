@@ -38,6 +38,9 @@
 
   /* nav height */
   --nav-height: 64px;
+
+  /* eds capstone color */
+  --capstone-background-color: #ffea00;
 }
 
 /* fallback fonts */
