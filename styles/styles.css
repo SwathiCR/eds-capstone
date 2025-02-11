@@ -314,6 +314,10 @@ main .section.word-dictionary .default-content-wrapper p:first-of-type::after {
   main .section.word-dictionary .default-content-wrapper {
     padding: 3.7%;
   }
+
+  main .section.magazine:not(:has(~ .section.magazine)) p:last-of-type {
+    padding-bottom: 10%;
+  }
 }
 
 /* section metadata */
