@@ -245,6 +245,55 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
+main .magazine {
+  padding: 10px;
+  margin: 0;
+  line-height: 2;
+  font-size: 01rem;
+}
+
+main .magazine h2, h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 0;
+  font-weight: 300;
+}
+
+main .magazine h3 {
+  display: inline-block;
+  padding: 20px;
+  border-bottom: 2px solid var(--capstone-background-color);
+}
+
+main .section.magazine:not(:has(~ .section.magazine)) p:last-of-type {
+  padding-bottom: 20%;
+  border-bottom: 1px solid lightgrey;
+}
+
+main .section.word-dictionary {
+  background-color: lightgray;
+  margin: 0px;
+}
+
+main .section.word-dictionary .default-content-wrapper {
+  padding: 10%;
+}
+
+main .section.word-dictionary h4, .section.word-dictionary p:first-of-type {
+  font-size: 2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+main .section.word-dictionary .default-content-wrapper p:first-of-type::after {
+  margin-bottom: 2%;
+  border-bottom: 2px solid var(--capstone-background-color);
+  content: "";
+  display: block;
+  position: relative;
+  top: .25em;
+  width: 5pc;
+}
+
 @media (width >= 900px) {
   main > .section > div {
     padding: 0 32px;
