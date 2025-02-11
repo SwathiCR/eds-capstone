@@ -298,6 +298,14 @@ main .section.word-dictionary .default-content-wrapper p:first-of-type::after {
   main > .section > div {
     padding: 0 32px;
   }
+
+  main .section.word-dictionary {
+    margin: 2%;
+  }
+
+  main .section.word-dictionary .default-content-wrapper {
+    padding: 3.7%;
+  }
 }
 
 /* section metadata */
