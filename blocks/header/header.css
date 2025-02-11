@@ -231,7 +231,7 @@ header nav .nav-sections ul > li > ul > li {
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li:hover {
-    background-color: #ffea00;
+    background-color: var(--capstone-background-color);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {

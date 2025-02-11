@@ -32,7 +32,7 @@
 
 .columns .button-container a.button {
   border-radius: 0%;
-  background-color: #ffea00;
+  background-color: var(--capstone-background-color);
   color: black;
 }
 
