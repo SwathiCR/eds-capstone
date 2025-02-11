@@ -261,7 +261,15 @@ main .magazine h2, h3 {
 main .magazine h3 {
   display: inline-block;
   padding: 20px;
+}
+
+main .magazine h3::after {
   border-bottom: 2px solid var(--capstone-background-color);
+  content: "";
+  display: block;
+  position: relative;
+  top: .25em;
+  width: 5pc;
 }
 
 main .section.magazine:not(:has(~ .section.magazine)) p:last-of-type {
