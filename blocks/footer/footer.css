@@ -17,6 +17,7 @@ footer .footer p {
 footer .footer .section:first-of-type .default-content-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 5%;
 }
 
 footer .footer .default-content-wrapper picture img {
@@ -52,6 +53,7 @@ footer .footer .section:last-of-type .default-content-wrapper a {
 
   footer .footer .section:first-of-type .default-content-wrapper {
     display: flex;
+    margin-bottom: 1%;
   }
 
   footer .footer .section:first-of-type .default-content-wrapper p {
