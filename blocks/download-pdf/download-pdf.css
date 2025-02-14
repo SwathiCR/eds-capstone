@@ -54,3 +54,9 @@ h3#download-pdf-1 a {
     font-family: 'Source Sans 3', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-align: center;
 }
+
+@media(width >= 900px) {
+    h3#download-pdf-1 {
+        width: 45%;
+    }
+}
