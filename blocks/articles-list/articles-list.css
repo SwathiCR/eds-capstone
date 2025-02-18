@@ -43,7 +43,7 @@
     margin: 5%;
 }
 
-.articles-list-container .default-content-wrapper ::after {
+.articles-list-container .default-content-wrapper h3::after {
   border-bottom: 2px solid var(--capstone-background-color);
   content: '';
   display: block;
