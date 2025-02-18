@@ -27,6 +27,7 @@ export default async function decorate(block) {
                 lastModified.textContent = formatDate(article.lastModified);
 
                 articleTitle.append(titleSpan, lastModified);
+                articleItem.append(articleTitle);
             } else if (imageAttr) {
                 articleTitle.textContent = article.title;
 
@@ -37,10 +38,8 @@ export default async function decorate(block) {
                 description.classList.add('article-description');
                 description.textContent = article.description;
 
-                articleItem.append(thumbnail, description);
+                articleItem.append(thumbnail, articleTitle, description);
             }
-
-            articleItem.append(articleTitle);
             articlesList.append(articleItem);
         }
     });

@@ -37,9 +37,68 @@
     font-size: 0.7rem;
 }
 
+.articles-list-container .default-content-wrapper h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    margin: 5%;
+}
+
+.articles-list-container .default-content-wrapper ::after {
+  border-bottom: 2px solid var(--capstone-background-color);
+  content: '';
+  display: block;
+  position: relative;
+  top: .25em;
+  width: 5pc;
+}
+
+.articles-list-container .articles-list-wrapper .articles-list.with-image ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.articles-list-container .articles-list-wrapper .articles-list.with-image li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.articles-list-container .articles-list-wrapper .articles-list.with-image li img {
+    width: 260px;
+    height: 200px;
+}
+
+.articles-list-container .articles-list-wrapper .articles-list.with-image li a {
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+.articles-list-container .articles-list-wrapper .articles-list.with-image li p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 260px;
+    color: dimgray;
+    white-space: nowrap;
+}
+
 @media (width >= 900px) {
     .articles-list-container {
         flex: 0 1 20%;
+    }
+
+    .articles-list-container .default-content-wrapper h3 {
+        margin: 2%;
+    }
+
+    .articles-list-container .articles-list-wrapper .articles-list.with-image ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
 }
