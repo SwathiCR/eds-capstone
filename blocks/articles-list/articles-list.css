@@ -94,10 +94,11 @@
     border-radius: 0%;
     color: black;
     text-transform: uppercase;
-    margin-left: 3%;
 }
 
-.articles-list-container .default-content-wrapper:last-of-type {
+.articles-list-container .default-content-wrapper .button-container {
+    margin-right: 4%;
+    margin-left: 4%;
     padding-bottom: 4rem;
     border-bottom: 1px solid lightgrey;
 }
