@@ -10,6 +10,7 @@ export default async function decorate(block) {
     const articlesList = document.createElement('ul');
     articlesList.classList.add('articles-items-list');
 
+    magazineArticles.data.sort((art1, art2) => art2.lastModified - art1.lastModified);
     magazineArticles.data.forEach((article) => {
         if (article.path && article.path.startsWith('/magazine') && !article.path.endsWith('/magazine/')) {
             const articleItem = document.createElement('li');
