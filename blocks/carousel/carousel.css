@@ -211,4 +211,13 @@
     .carousel .carousel-slide-indicators {
         justify-content: center;
     }
+
+    .carousel .carousel-slide .carousel-slide-content a.button {
+        font-size: unset;
+        padding: 0.5em 1.2em;
+    }
+
+    .carousel-container .default-content-wrapper h3 {
+        margin: 5% 5% 5% 2%;
+    }
 }

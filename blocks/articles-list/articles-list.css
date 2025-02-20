@@ -122,4 +122,8 @@
     .articles-list-container .button-container a.button {
         margin-left: 0;
     }
+
+    .articles-list-container .default-content-wrapper .button-container {
+        margin-left: 0;
+    }
 }

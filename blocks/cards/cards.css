@@ -9,11 +9,6 @@
   font-size: 0.75rem;
 }
 
-/* .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
-} */
-
 .cards .cards-card-body {
   margin: 0px;
 }
@@ -65,4 +60,21 @@
   font-size: 0.9rem;
   padding: 4% 7%;
   text-transform: uppercase;
+}
+
+@media (width >= 900px) {
+  .cards > ul {
+    padding: 20px 60px 20px 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .cards-container .default-content-wrapper {
+    padding: 0;
+  }
+
+  .cards-container .button-container a.button {
+    padding: 1% 3%;
+  }
 }
