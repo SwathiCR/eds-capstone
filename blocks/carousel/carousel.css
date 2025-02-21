@@ -66,12 +66,15 @@
     margin: 0;
     font-size: 2rem;
     font-weight: 100;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .carousel .carousel-slide .carousel-slide-content a.button {
     background-color: var(--capstone-background-color);
     border-radius: 0%;
     color: black;
+    font-size: 0.9rem;
+    padding: 4% 7%;
 }
 
 .carousel .carousel-slide-indicators {
@@ -156,6 +159,21 @@
     margin-top: 0;
 }
 
+.carousel-container .default-content-wrapper h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    margin: 5%;
+}
+
+.carousel-container .default-content-wrapper h3::after {
+  border-bottom: 2px solid var(--capstone-background-color);
+  content: '';
+  display: block;
+  position: relative;
+  top: .25em;
+  width: 5pc;
+}
+
 @media (width >=600px) {
     .carousel-wrapper {
         margin: 0;
@@ -192,5 +210,14 @@
 
     .carousel .carousel-slide-indicators {
         justify-content: center;
+    }
+
+    .carousel .carousel-slide .carousel-slide-content a.button {
+        font-size: unset;
+        padding: 0.5em 1.2em;
+    }
+
+    .carousel-container .default-content-wrapper h3 {
+        margin: 5% 5% 5% 2%;
     }
 }
