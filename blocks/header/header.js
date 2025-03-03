@@ -198,10 +198,14 @@ export default async function decorate(block) {
   const formBlock = block.querySelector('.form');
   const registerAriaLink = block.querySelector('p.nav-drop');
   registerAriaLink.addEventListener('click', () => {
-    registerAriaLink.setAttribute('aria-expanded', 'true');
-    formBlock.style.display = 'block';
+    const expanded = registerAriaLink.getAttribute('aria-expanded') === 'true';
+    toggleAllNavSections(registerAriaLink);
+    registerAriaLink.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    if (registerAriaLink.getAttribute('aria-expanded') === 'false') {
+      formBlock.style.display = 'none';
+    } else {
+      formBlock.style.display = 'block';
+    }
   });
-  if (registerAriaLink.getAttribute('aria-expanded') === 'false') {
-    formBlock.style.display = 'none';
-  }
+  formBlock.style.display = 'none';
 }
