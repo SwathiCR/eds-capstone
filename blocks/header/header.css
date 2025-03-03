@@ -381,6 +381,19 @@ header .register-nav div:last-of-type>ul>.nav-drop[aria-expanded='true']>ul li u
   left: 25px;
 }
 
+header .form-container .form-wrapper .form {
+  padding: 0;
+  list-style: none;
+  display: block;
+  position: absolute;
+  margin-top: 12px;
+  background-color: black;
+  white-space: initial;
+  top: 35px;
+  width: 315px;
+  transform: translateX(15%);
+}
+
 @media(width >= 900px) {
 
   header .nav-wrapper #register-nav-header .register-nav {
@@ -421,6 +434,13 @@ header .register-nav div:last-of-type>ul>.nav-drop[aria-expanded='true']>ul li u
 
   header .register-nav div:last-of-type>ul>.nav-drop[aria-expanded='true']::after {
     top: 0.8em;
+  }
+
+  header .form-container .form-wrapper .form {
+    margin-top: 30px;
+    top: 40px;
+    width: 375px;
+    transform: translateX(15%);
   }
 
 }

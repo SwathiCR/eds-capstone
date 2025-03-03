@@ -123,7 +123,7 @@ export default async function decorate(block) {
   
   while (fragment.firstElementChild) {
     if(fragment.firstElementChild.children.length > 0) {
-      if(fragment.firstElementChild.classList.contains('register-nav-container')) {
+      if(fragment.firstElementChild.classList.contains('register-nav-container') || fragment.firstElementChild.classList.contains('form-container')) {
         registerNav.append(fragment.firstElementChild);
       } else {
         nav.append(fragment.firstElementChild);
@@ -160,17 +160,21 @@ export default async function decorate(block) {
     });
   }
 
-   const registerSections = registerNav.querySelector('.register-nav');
-   if (registerSections) {
-     const langList = registerSections.querySelector(':scope div > ul > li');
-     langList.classList.add('nav-drop');
-     langList.setAttribute('aria-expanded', 'false');
-     langList.addEventListener('click', () => {
+  const registerSections = registerNav.querySelector('.register-nav');
+  if (registerSections) {
+    const langList = registerSections.querySelector(':scope div > ul > li');
+    langList.classList.add('nav-drop');
+    langList.setAttribute('aria-expanded', 'false');
+    langList.addEventListener('click', () => {
       const expanded = langList.getAttribute('aria-expanded') === 'true';
-               toggleAllNavSections(langList);
-               langList.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-           });
-   }
+      toggleAllNavSections(langList);
+      langList.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    });
+
+    const registerLink = registerSections.querySelector(':scope div > div > p');
+    registerLink.classList.add('nav-drop');
+    registerLink.setAttribute('aria-expanded', 'false');
+  }
 
   // hamburger for mobile
   const hamburger = document.createElement('div');
@@ -190,4 +194,14 @@ export default async function decorate(block) {
   navWrapper.append(registerNav);
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  const formBlock = block.querySelector('.form');
+  const registerAriaLink = block.querySelector('p.nav-drop');
+  registerAriaLink.addEventListener('click', () => {
+    registerAriaLink.setAttribute('aria-expanded', 'true');
+    formBlock.style.display = 'block';
+  });
+  if (registerAriaLink.getAttribute('aria-expanded') === 'false') {
+    formBlock.style.display = 'none';
+  }
 }
